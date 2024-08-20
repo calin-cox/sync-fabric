@@ -60,13 +60,13 @@ repositories {
         name = "Nexus OSS Repository"
         url = "https://oss.sonatype.org/content/repositories/snapshots"
     }
-    maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
-        content {
-            includeGroup "maven.modrinth"
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven/"
+        metadataSources {
+            artifact()
         }
-    }
+	}
     maven {
         name = "CrowdinTranslate"
         url = "https://minecraft.guntram.de/maven/"
@@ -103,11 +103,12 @@ dependencies {
     modImplementation(include("de.guntram.mcmod:crowdin-translate:${project.crowdin_translate_version}"))
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
     modImplementation "org.ladysnake:satin:${project.satin_version}"
-    modImplementation(include("maven.modrinth:smart-recipes:${project.smartrecipes_version}"))
+    modImplementation "maven.modrinth:smart-recipes:${project.smartrecipes_version}"
     modImplementation "io.github.ladysnake:requiem-api:${requiem_version}"
-
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}"
     modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+    modImplementation "maven.modrinth:additionalentityattributes:${project.additionalentityattributes_version}"
+
     modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
     modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
     modCompileOnly "maven.modrinth:origins:${project.origins_version}"
