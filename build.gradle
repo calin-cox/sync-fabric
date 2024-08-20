@@ -43,9 +43,8 @@ repositories {
         name = "Ladysnake Mods"
         url = "https://maven.ladysnake.org/releases"
         content {
-            includeGroup 'io.github.ladysnake'
             includeGroup 'org.ladysnake'
-            includeGroupByRegex 'dev\\.onyxstudios.*'
+            includeGroup 'io.github.ladysnake'
             includeGroupByRegex '(dev|io\\.github)\\.onyxstudios.*'
             includeGroupByRegex 'dev\\.emi.*'
         }
@@ -105,11 +104,12 @@ dependencies {
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
     modImplementation "org.ladysnake:satin:${project.satin_version}"
     modImplementation(include("maven.modrinth:smart-recipes:${project.smartrecipes_version}"))
+    modImplementation "io.github.ladysnake:requiem-api:${requiem_version}"
 
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}"
     modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
     modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
-    modCompileOnly("org.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
+    modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
     modCompileOnly "maven.modrinth:origins:${project.origins_version}"
     modCompileOnly "com.github.apace100:apoli:${project.apoli_version}"
     modCompileOnly "maven.modrinth:haema:${project.haema_version}"
