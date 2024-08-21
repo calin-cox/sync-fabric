@@ -108,6 +108,7 @@ dependencies {
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}"
     modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
     modImplementation "maven.modrinth:additionalentityattributes:${project.additionalentityattributes_version}"
+    compileOnly "org.apiguardian:apiguardian-api:${apiguardian_version}"
 
     modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
     modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
