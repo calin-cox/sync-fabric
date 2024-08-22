@@ -27,7 +27,7 @@ public final class CustomGameRenderer extends GameRenderer {
         super(client, heldItemRenderer, resourceManager, buffers);
     }
 
-    public static void initRenderTypeEntityTranslucentPartiallyTexturedShader(float cutoutY, Matrix4f modelMatrix) {
+    public static void initRenderTypeEntityTranslucentPartiallyTexturedShader(float cutoutY, net.minecraft.util.math.Matrix4f modelMatrix) {
         RENDER_TYPE_ENTITY_TRANSLUCENT_PARTIALLY_TEXTURED_SHADER_UNIFORM_CUTOUT_Y.set(cutoutY);
         RENDER_TYPE_ENTITY_TRANSLUCENT_PARTIALLY_TEXTURED_SHADER_UNIFORM_MODEL_MAT.set(modelMatrix);
     }
