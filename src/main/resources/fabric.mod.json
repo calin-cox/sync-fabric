@@ -28,7 +28,7 @@
     ],
     "cardinal-components-entity": [
       "dev.kir.sync.compat.origins.OriginsCompat",
-      "dev.kir.sync.compat.haema.HaemaCompat",
+  
       "dev.kir.sync.compat.trinkets.TrinketsCompat"
     ]
   },
@@ -61,7 +61,6 @@
     "modmenu": "${modmenu}",
     "trinkets": "${trinkets}",
     "origins": "${origins}",
-    "haema": "${haema}",
     "requiem": "${requiem}"
   }
 }
