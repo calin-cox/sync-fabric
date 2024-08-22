@@ -27,7 +27,7 @@ public final class SyncRenderers {
     }
 
     private static <E extends BlockEntity> void register(BlockEntityRendererFactory<? super E> rendererFactory, BlockEntityType<E> blockEntityType) {
-        BlockEntityRendererRegistry.register(blockEntityType, rendererFactory);
+        net.minecraft.client.render.block.entity.BlockEntityRendererFactories.register(blockEntityType, rendererFactory);
 
         Identifier id = Registry.BLOCK_ENTITY_TYPE.getId(blockEntityType);
         Block block = Registry.BLOCK.get(id);

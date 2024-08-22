@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id "fabric-loom" version "0.12-SNAPSHOT"
+    id "fabric-loom" version "1.7-SNAPSHOT"
     id "org.ajoberstar.grgit" version "4.1.0"
 }
 
@@ -90,6 +90,9 @@ repositories {
             includeGroup "net.adriantodt.fabricmc"
         }
     }
+    flatDir{
+        dirs '/dependencies'
+    }
 }
 
 // To change the versions see the gradle.properties file
@@ -99,6 +102,8 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    // https://mvnrepository.com/artifact/dev.onyxstudios.cardinal-components-api/cardinal-components-api
+    runtimeOnly 'dev.onyxstudios.cardinal-components-api:cardinal-components-api:5.2.1'
 
     modImplementation(include("de.guntram.mcmod:crowdin-translate:${project.crowdin_translate_version}"))
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
@@ -109,6 +114,7 @@ dependencies {
     modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
     modImplementation "maven.modrinth:additionalentityattributes:${project.additionalentityattributes_version}"
     compileOnly "org.apiguardian:apiguardian-api:${apiguardian_version}"
+    implementation 'org.joml:joml:1.10.8'
 
     modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
     modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
