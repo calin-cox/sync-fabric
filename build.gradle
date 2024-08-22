@@ -102,9 +102,9 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "com.github.apace100:calio:${project.calio_version}"
     // https://mvnrepository.com/artifact/dev.onyxstudios.cardinal-components-api/cardinal-components-api
-    modImplementation 'dev.onyxstudios.cardinal-components-api:cardinal-components-api:5.2.1'
-
+    modImplementation 'dev.onyxstudios.cardinal-components-api:cardinal-components-api:4.2.0'
     modImplementation(include("de.guntram.mcmod:crowdin-translate:${project.crowdin_translate_version}"))
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
     modImplementation "maven.modrinth:smart-recipes:${project.smartrecipes_version}"
@@ -116,7 +116,6 @@ dependencies {
 
     modCompileOnly "dev.emi:trinkets:${project.trinkets_version}"
     modCompileOnly("io.github.ladysnake:requiem-api:${project.requiem_version}", { transitive false })
-    modCompileOnly "maven.modrinth:origins:${project.origins_version}"
     modCompileOnly "com.github.apace100:apoli:${project.apoli_version}"
 }
 
