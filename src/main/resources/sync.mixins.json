@@ -15,6 +15,7 @@
     "ClientPlayerEntityMixin",
     "ClientPlayerInteractionManagerMixin",
     "EntityRenderDispatcherMixin",
+    "GameRendererMixin",
     "MinecraftClientMixin",
     "PlayerEntityModelMixin",
     "WorldRendererMixin"

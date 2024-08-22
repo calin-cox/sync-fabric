@@ -2,7 +2,6 @@ package dev.kir.sync.compat.mixin.iris;
 
 import dev.kir.sync.client.render.CustomRenderLayer;
 import dev.kir.sync.compat.iris.IrisRenderLayer;
-import ladysnake.satin.api.managed.ManagedCoreShader;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.RenderLayer;
@@ -15,8 +14,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Environment(EnvType.CLIENT)
 @Mixin(CustomRenderLayer.class)
 final class CustomRenderLayerMixin {
-    @Redirect(method = "<clinit>", at = @At(value = "INVOKE", target = "Lladysnake/satin/api/managed/ManagedCoreShader;getRenderLayer(Lnet/minecraft/client/render/RenderLayer;)Lnet/minecraft/client/render/RenderLayer;", ordinal = 0))
-    private static RenderLayer initVoxelRenderLayer(ManagedCoreShader shader, RenderLayer baseLayer) {
+    @Redirect(method = "<clinit>", at = @At(value = "INVOKE", target = "ladysnake/satin/api/managed/ManagedCoreShader;getRenderLayer(Lnet/minecraft/client/render/RenderLayer;)Lnet/minecraft/client/render/RenderLayer;", ordinal = 0))
+    private static RenderLayer initVoxelRenderLayer(Shader shader, RenderLayer baseLayer) {
         return IrisRenderLayer.getVoxels();
     }
 

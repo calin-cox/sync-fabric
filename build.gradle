@@ -107,7 +107,6 @@ dependencies {
 
     modImplementation(include("de.guntram.mcmod:crowdin-translate:${project.crowdin_translate_version}"))
     modImplementation(include("teamreborn:energy:${project.tr_energy_version}"))
-    modImplementation "org.ladysnake:satin:${project.satin_version}"
     modImplementation "maven.modrinth:smart-recipes:${project.smartrecipes_version}"
     modImplementation "io.github.ladysnake:requiem-api:${requiem_version}"
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}"
@@ -128,7 +127,6 @@ processResources {
             "fabric": ">=${loaderDependencyVersion}",
             "minecraft": ">=${minecraftDependencyVersion}",
             "smart_recipes": project.smartrecipes_version,
-            "satin_api": project.satin_version,
             "crowdin_translate": project.crowdin_translate_version,
             "team_reborn_energy": project.tr_energy_version,
             "cloth_config": ">=${project.cloth_version}",
