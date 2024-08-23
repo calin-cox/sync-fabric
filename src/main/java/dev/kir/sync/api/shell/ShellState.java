@@ -316,10 +316,10 @@ public class ShellState {
     }
 
 
-    @Environment(EnvType.CLIENT)
-    private ShellEntity entityInstance = null;
+    //@Environment(EnvType.CLIENT)
+    public ShellEntity entityInstance = null;
 
-    @Environment(EnvType.CLIENT)
+    //Environment(EnvType.CLIENT)
     public ShellEntity asEntity() {
         if (this.entityInstance == null) {
             this.entityInstance = new ShellEntity(this);
