@@ -17,8 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.kir.sync.Sync",
-      "dev.kir.sync.compat.requiem.RequiemCompat"
+      "dev.kir.sync.Sync"
     ],
     "client": [
       "dev.kir.sync.Sync"
