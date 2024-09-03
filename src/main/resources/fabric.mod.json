@@ -24,11 +24,6 @@
     ],
     "modmenu": [
       "dev.kir.sync.compat.modmenu.ModMenuCompat"
-    ],
-    "cardinal-components-entity": [
-      "dev.kir.sync.compat.origins.OriginsCompat",
-  
-      "dev.kir.sync.compat.trinkets.TrinketsCompat"
     ]
   },
   "mixins": [
